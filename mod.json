@@ -1,5 +1,5 @@
 {
-	"geode": "4.0.1",
+	"geode": "4.4.0",
 	"gd": {
 		"win": "2.2074",
 		"mac": "2.2074",
@@ -36,11 +36,10 @@
 			}
 		}
 	},
-	"incompatibilities": [
-		{
-			"id": "sofabeddd.geometry_dash",
+	"incompatibilities": {
+		"sofabeddd.geometry_dash": {
 			"version": "<=v1.1.1",
 			"importance": "breaking"
 		}
-	]
+    }
 }
