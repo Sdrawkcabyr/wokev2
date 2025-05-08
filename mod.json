@@ -1,9 +1,10 @@
 {
-	"geode": "4.0.1",
+	"geode": "4.4.0",
 	"gd": {
 		"win": "2.2074",
 		"mac": "2.2074",
-		"android": "2.2074"
+		"android": "2.2074",
+		"ios": "2.2074"
 	},
 	"early-load": true,
 	"id": "flingus.geometry_pride",
@@ -36,11 +37,10 @@
 			}
 		}
 	},
-	"incompatibilities": [
-		{
-			"id": "sofabeddd.geometry_dash",
+	"incompatibilities": {
+		"sofabeddd.geometry_dash": {
 			"version": "<=v1.1.1",
 			"importance": "breaking"
 		}
-	]
+    }
 }
