@@ -1,14 +1,19 @@
+#include "Geode/binding/FLAlertLayer.hpp"
 #include <Geode/modify/MenuLayer.hpp>
 #include <Geode/modify/LoadingLayer.hpp>
 #include <Geode/ui/GeodeUI.hpp>
 
 using namespace geode::prelude;
 
-CCSpriteFrame *updateSpriteCache(int pride = Mod::get()->getSettingValue<int64_t>("pride")) {
+CCSpriteFrame *updateSpriteCache(std::string pride = Mod::get()->getSettingValue<std::string>("woke")) {
     auto cache = CCSpriteFrameCache::get();
 	auto wokeFrame = cache->spriteFrameByName(fmt::format("{}.png"_spr, pride).c_str());
-	cache->removeSpriteFrameByName("GJ_logo_001.png");
-	cache->addSpriteFrame(wokeFrame, "GJ_logo_001.png");
+    if (!wokeFrame) {
+        log::error("frame {} not found", pride);
+        return nullptr;
+    }
+    cache->removeSpriteFrameByName("GJ_logo_001.png");
+    cache->addSpriteFrame(wokeFrame, "GJ_logo_001.png");
     return wokeFrame;
 }
 
@@ -50,7 +55,7 @@ class $modify(MyMenuLayer, MenuLayer) {
 };
 
 $on_mod(Loaded) {
-    geode::listenForSettingChanges<uint64_t>("pride", [](uint64_t val) {
+    geode::listenForSettingChanges("woke", [](std::string val) {
         auto frame = updateSpriteCache(val);
         if (auto ml = MenuLayer::get()) {
             if (auto logo = typeinfo_cast<CCSprite *>(ml->getChildByIDRecursive("main-title"))) {

@@ -1,3 +1,7 @@
+# 1.1.0
+- Change logo on the loading screen (thanks km7dev :3)
+- Logo gets updated instantly now, instead of after reloading the menu (thanks km7dev :3)
+- Fix aromantic flag not being able to be selected
 # 1.0.2
 - Added Aromantic flag
 # 1.0.1

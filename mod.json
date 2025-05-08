@@ -9,7 +9,7 @@
 	"early-load": true,
 	"id": "flingus.geometry_pride",
 	"name": "Geometry Pride",
-	"version": "v1.0.1",
+	"version": "v1.1.0",
 	"developer": "flingus",
 	"description": "geometry dash but WOEK",
 	"links": {
@@ -23,24 +23,12 @@
 		}
 	},
 	"settings": {
-		"pride": {
-			"type": "int",
+		"woke": {
+			"type": "string",
 			"name": "Woke Type",
-			"description": "which type of woke are YOU today?!\n\n0: Lesbian, 1: Gay, 2: Bi\n3: Trans, 4: Non-Binary, 5: Intersex\n6: Asexual, 7: Pansexual, 8: Genderfluid\n9: Progress Flag\n10: Intersex (Flag Accurate)\n11: Aromantic",
-			"default": 9,
-			"min": 0,
-			"max": 11,
-			"control": {
-				"slider": true,
-				"input": true,
-				"slider-step": 1
-			}
+			"description": "Changes which <cr>pride flag</c> is used for the <cg>logo</c>.",
+			"default": "Progress",
+			"one-of": [ "Lesbian", "Gay", "Bisexual", "Trans", "Non-Binary", "Intersex", "Asexual", "Pansexual", "Genderfluid", "Progress", "IntersexAccurate", "Aromantic" ]
 		}
-	},
-	"incompatibilities": {
-		"sofabeddd.geometry_dash": {
-			"version": "<=v1.1.1",
-			"importance": "breaking"
-		}
-    }
+	}
 }
