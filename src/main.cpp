@@ -1,4 +1,3 @@
-#include "Geode/binding/FLAlertLayer.hpp"
 #include <Geode/modify/MenuLayer.hpp>
 #include <Geode/modify/LoadingLayer.hpp>
 #include <Geode/ui/GeodeUI.hpp>
@@ -18,6 +17,13 @@ CCSpriteFrame *updateSpriteCache(std::string pride = Mod::get()->getSettingValue
 }
 
 class $modify(MyLoadingLayer, LoadingLayer) {
+    static void onModify(auto& self) {
+        Result<> res = self.setHookPriorityPre("LoadingLayer::init", Priority::Late);
+        if (res.isErr()) {
+            geode::log::warn("Failed to set hook priority for LoadingLayer::init: {}", res.unwrapErr());
+        }
+    }
+
     bool init(bool p0) {
         CCFileUtils::sharedFileUtils()->addSearchPath((Mod::get()->getTempDir() / "resources").string().c_str());
         CCSpriteFrameCache::get()->addSpriteFramesWithFile("WokeSheet.plist"_spr);
