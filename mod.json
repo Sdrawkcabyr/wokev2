@@ -7,13 +7,13 @@
 		"ios": "2.2074"
 	},
 	"early-load": true,
-	"id": "flingus.geometry_pride",
-	"name": "Geometry Pride",
-	"version": "v1.1.1",
+	"id": "sdrawkcab.geometry_pridev2",
+	"name": "Geometry Pride v2",
+	"version": "v1.1.2",
 	"developer": "flingus",
-	"description": "geometry dash but WOEK",
+	"description": "geometry dash but WOEK and BERTER",
 	"links": {
-		"source": "https://github.com/flngus/woke"
+		"source": "https://github.com/sdrawkcab/wokev2"
 	},
 	"resources": {
 		"spritesheets": {
@@ -28,7 +28,7 @@
 			"name": "Woke Type",
 			"description": "Changes which <cr>pride flag</c> is used for the <cg>logo</c>.",
 			"default": "Progress",
-			"one-of": [ "Lesbian", "Gay", "Bisexual", "Trans", "Non-Binary", "Intersex", "Asexual", "Pansexual", "Genderfluid", "Progress", "IntersexAccurate", "Aromantic" ]
+			"one-of": [ "Lesbian", "Gay", "Bisexual", "Trans", "Non-Binary", "Intersex", "Asexual", "Pansexual", "Genderfluid", "Progress", "IntersexAccurate", "Aromantic", "AroAce" ]
 		}
 	}
 }
