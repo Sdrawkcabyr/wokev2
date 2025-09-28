@@ -1,3 +1,5 @@
+# 1.1.2
+- Added AroAce flag
 # 1.1.1
 - Fix compatibility with High Graphics on Mobile
 # 1.1.0
